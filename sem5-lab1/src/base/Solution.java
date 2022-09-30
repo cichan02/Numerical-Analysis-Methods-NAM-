@@ -44,7 +44,7 @@ public final class Solution {
 	private static double newtonMethod(double x, double y, double h) {
 		double prevIter = y;
 		double curIter = newtonIteration(x, y, prevIter, h);
-		while(abs(curIter - prevIter) > 1e6) {
+		while(abs(curIter - prevIter) > 1e-6) {
 			prevIter = curIter;
 			curIter = newtonIteration(x, y, prevIter, h);
 		}
@@ -58,9 +58,9 @@ public final class Solution {
 	private static void methodsFrame(double h, String name, ToDoubleThreeFunction<Double, Double, Double> functionToY) {
 		System.out.println(name + " с шагом: \nh = " +  h);
 		double y = y0, x = a, norm = 0;
-		while(x <= b) {
+		while(x - b <= 1e-6) {
 			norm = max(norm, abs(y - u(x)));
-			System.out.println(x + " " + y + " " + u(x));
+//			System.out.println(x + " " + y + " " + u(x));
 			y = functionToY.applyAsDouble(x, y, h);
 			x += h;
 		}
