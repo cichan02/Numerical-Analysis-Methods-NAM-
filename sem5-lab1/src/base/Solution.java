@@ -38,7 +38,7 @@ public final class Solution {
 	}
 	
 	private static double newtonIteration(double x, double y, double prevIter, double h) {
-		return prevIter - ((prevIter - y - h * (phi0(x, y) + phi0(x+h, prevIter)) / 2) / (1 - h * dphi0(x+h, prevIter) / 2));
+		return prevIter - ((prevIter - y - h * (phi0(x, y) + phi0(x + h, prevIter)) / 2) / (1 - h * dphi0(x+h, prevIter) / 2));
 	}
 	
 	private static double newtonMethod(double x, double y, double h) {
