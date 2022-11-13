@@ -111,7 +111,6 @@ public class Solution {
 	
 	private static double normRunge(List<Double> vector, List<Double> doubleVector) {
 		int n = vector.size(), m = 1;
-		int n1 = doubleVector.size();
 		double norm  = 0;
 		for(int i = 0; i < n; i++) {
 			double x1 = vector.get(i);
