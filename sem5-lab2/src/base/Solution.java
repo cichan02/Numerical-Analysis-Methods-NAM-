@@ -8,7 +8,7 @@ public class Solution {
 		List<Double> u1 = Solver.solve(h);
 		System.out.println("Норма: " + Solver.norm(h, u1));
 		List<Double> u2 = Solver.solve(2 * h);
-		System.out.println("Погрешность по методу Рунге-Кутта: " + Solver.normRunge(u1, u2));
+		System.out.println("Погрешность по методу Рунге: " + Solver.normRunge(u1, u2));
 	}
 	
 	public static void main(String[] args) {
